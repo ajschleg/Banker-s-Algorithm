@@ -61,3 +61,19 @@ numbers of resources. The customers’ requests for resources will be bounded
 by their respective values in the need array. The banker will grant a request if
 it satisfies the safety algorithm outlined in Section 7.5.3.1. If a request does not
 leave the system in a safe state, the banker will deny it.
+
+## Safety Algorithm in Section 7.5.3.1
+We can now present the algorithm for finding out whether or not a system is
+in a safe state. This algorithm can be described as follows:
+    1. Let Work and Finish be vectors of length m and n, respectively. Initialize
+        Work = Available and Finish[i] = false for i = 0, 1, ..., n − 1.
+    2. Find an index i such that both
+        a. Finish[i] == false
+        b. Need i ≤ Work
+            If no such i exists, go to step 4.
+    3. Work = Work + Allocation i
+        Finish[i] = true
+        Go to step 2.
+    4. If Finish[i] == true for all i, then the system is in a safe state.
+        This algorithm may require an order of m × n 2 operations to determine whether
+        a state is safe.
