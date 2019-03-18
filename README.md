@@ -1,7 +1,10 @@
 # Banker-s-Algorithm
 
-# To make 
-## make
+# Commands
+## To make
+> make
+## To run
+> make run # # #
 
 # Outline
   When a new process enters the system, it must declare the maximum

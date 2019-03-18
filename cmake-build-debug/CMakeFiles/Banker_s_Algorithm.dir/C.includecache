@@ -1,0 +1,18 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/flynn/School/ECE408/Banker-s-Algorithm/main.c
+stdio.h
+-
+stdlib.h
+-
+main.h
+/home/flynn/School/ECE408/Banker-s-Algorithm/main.h
+
+/home/flynn/School/ECE408/Banker-s-Algorithm/main.h
+
