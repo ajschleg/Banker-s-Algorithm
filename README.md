@@ -1,4 +1,9 @@
 # Banker-s-Algorithm
+
+# To make 
+## make
+
+# Outline
   When a new process enters the system, it must declare the maximum
 number of instances of each resource type that it may need. This number may
 not exceed the total number of resources in the system. When a user requests
@@ -39,3 +44,17 @@ only if X[i] ≤ Y[i] for all i = 1, 2, ..., n. For example, if X = (1,7,3,2) an
 and refer to them as Allocation i and Need i . The vector Allocation i specifies
 the resources currently allocated to process P i ; the vector Need i specifies the
 additional resources that process P i may still request to complete its task.
+
+This programming assignment combines three separate topics:
+(1) multithreading, (2) preventing race conditions, and (3) deadlock avoidance.
+
+# The Banker
+The banker will consider requests from n customers for m resources types.
+
+# The Customers
+Create n customer threads that request and release resources from the bank.
+The customers will continually loop, requesting and then releasing random
+numbers of resources. The customers’ requests for resources will be bounded
+by their respective values in the need array. The banker will grant a request if
+it satisfies the safety algorithm outlined in Section 7.5.3.1. If a request does not
+leave the system in a safe state, the banker will deny it.
