@@ -14,6 +14,7 @@ int allocation[NUMBER_OF_CUSTOMERS][NUMBER_OF_RESOURCES];
 /* the remaining need of each customer */
 int need[NUMBER_OF_CUSTOMERS][NUMBER_OF_RESOURCES];
 
+
 /*
 These two functions should return 0 if successful (the request has been
 granted) and –1 if unsuccessful. Multiple threads (customers) will concurrently
@@ -22,5 +23,8 @@ controlled through mutex locks to prevent race conditions.
 */
 int request_resources(int customer_num, int request[]);
 int release_resources(int customer_num, int release[]);
+
+/*Thread functions*/
+void* thread_runner(void* param);
 
 #endif /* MAIN_H */

@@ -1,9 +1,9 @@
 # Banker-s-Algorithm
 
-# Commands
-## To make
+## Commands
+### To make
 > make
-## To run
+### To run
 > make run # # #
 
 # Outline
@@ -19,6 +19,15 @@ enough resources.
 algorithm. These data structures encode the state of the resource-allocation
 system. We need the following data structures, where n is the number of
 processes in the system and m is the number of resource types:
+
+Example: n x m
+
+    A B C
+P1  1 3 4
+P2  4 5 6
+P3  7 8 9
+P4  10 11 12
+
 
 • Available. A vector of length m indicates the number of available resources
 of each type. If Available[j] equals k, then k instances of resource type R j
@@ -77,3 +86,27 @@ in a safe state. This algorithm can be described as follows:
     4. If Finish[i] == true for all i, then the system is in a safe state.
         This algorithm may require an order of m × n 2 operations to determine whether
         a state is safe.
+
+# Assignment requirements
+You may assume that you have three resources with the following number of instances (available array)
+The number of customers, n, can vary.
+Initialize your maximum array with random numbers less than available array
+Every time you make an allocation show the following:
+The request,
+Allocation,
+Available,
+Maximum, and
+Need
+Indicate whether the request was successful or denied
+In your report show an example of a denied request and a granted request and explain the results. Why was the request denied or granted.
+
+## Grading
+(4 pts) implementation of customer threads
+
+(4 pts) implementation of request_resources
+
+(4 pts) implementation of safety algorithm
+
+(4 pts) overall working program
+
+(4 pts) report

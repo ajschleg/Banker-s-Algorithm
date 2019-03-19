@@ -10,3 +10,6 @@ CMakeFiles/Banker_s_Algorithm.dir/relResources.c.o: ../relResources.c
 CMakeFiles/Banker_s_Algorithm.dir/reqResources.c.o: ../main.h
 CMakeFiles/Banker_s_Algorithm.dir/reqResources.c.o: ../reqResources.c
 
+CMakeFiles/Banker_s_Algorithm.dir/threadRunner.c.o: ../main.h
+CMakeFiles/Banker_s_Algorithm.dir/threadRunner.c.o: ../threadRunner.c
+

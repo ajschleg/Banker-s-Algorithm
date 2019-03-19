@@ -9,4 +9,4 @@ add_executable(Banker_s_Algorithm
         main.c
         main.h
         relResources.c
-        reqResources.c)
+        reqResources.c threadRunner.c)
