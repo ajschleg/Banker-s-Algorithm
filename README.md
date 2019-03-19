@@ -62,10 +62,10 @@ additional resources that process P i may still request to complete its task.
 This programming assignment combines three separate topics:
 (1) multithreading, (2) preventing race conditions, and (3) deadlock avoidance.
 
-# The Banker
+## The Banker
 The banker will consider requests from n customers for m resources types.
 
-# The Customers
+## The Customers
 Create n customer threads that request and release resources from the bank.
 The customers will continually loop, requesting and then releasing random
 numbers of resources. The customers’ requests for resources will be bounded
