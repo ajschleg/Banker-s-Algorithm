@@ -14,6 +14,16 @@ int allocation[NUMBER_OF_CUSTOMERS][NUMBER_OF_RESOURCES];
 /* the remaining need of each customer */
 int need[NUMBER_OF_CUSTOMERS][NUMBER_OF_RESOURCES];
 
+struct Customer
+{
+
+};
+
+struct Banker
+{
+
+};
+
 
 /*
 These two functions should return 0 if successful (the request has been
@@ -26,5 +36,8 @@ int release_resources(int customer_num, int release[]);
 
 /*Thread functions*/
 void* thread_runner(void* param);
+
+void print2dArray(int arr[NUMBER_OF_CUSTOMERS][NUMBER_OF_RESOURCES]);
+void print1dArray(int arr[]);
 
 #endif /* MAIN_H */

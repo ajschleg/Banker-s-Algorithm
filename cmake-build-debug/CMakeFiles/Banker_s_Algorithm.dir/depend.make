@@ -4,6 +4,9 @@
 CMakeFiles/Banker_s_Algorithm.dir/main.c.o: ../main.c
 CMakeFiles/Banker_s_Algorithm.dir/main.c.o: ../main.h
 
+CMakeFiles/Banker_s_Algorithm.dir/printFunctions.c.o: ../main.h
+CMakeFiles/Banker_s_Algorithm.dir/printFunctions.c.o: ../printFunctions.c
+
 CMakeFiles/Banker_s_Algorithm.dir/relResources.c.o: ../main.h
 CMakeFiles/Banker_s_Algorithm.dir/relResources.c.o: ../relResources.c
 

@@ -71,7 +71,7 @@ CMAKE_BINARY_DIR = /Users/austinschlegel/School/ECE408_OS/Banker-s-Algorithm/cma
 CMakeFiles/Banker_s_Algorithm.dir/all:
 	$(MAKE) -f CMakeFiles/Banker_s_Algorithm.dir/build.make CMakeFiles/Banker_s_Algorithm.dir/depend
 	$(MAKE) -f CMakeFiles/Banker_s_Algorithm.dir/build.make CMakeFiles/Banker_s_Algorithm.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/austinschlegel/School/ECE408_OS/Banker-s-Algorithm/cmake-build-debug/CMakeFiles --progress-num=1,2,3,4,5 "Built target Banker_s_Algorithm"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/austinschlegel/School/ECE408_OS/Banker-s-Algorithm/cmake-build-debug/CMakeFiles --progress-num=1,2,3,4,5,6 "Built target Banker_s_Algorithm"
 .PHONY : CMakeFiles/Banker_s_Algorithm.dir/all
 
 # Include target in all.
@@ -81,7 +81,7 @@ all: CMakeFiles/Banker_s_Algorithm.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/Banker_s_Algorithm.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/austinschlegel/School/ECE408_OS/Banker-s-Algorithm/cmake-build-debug/CMakeFiles 5
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/austinschlegel/School/ECE408_OS/Banker-s-Algorithm/cmake-build-debug/CMakeFiles 6
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/Banker_s_Algorithm.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/austinschlegel/School/ECE408_OS/Banker-s-Algorithm/cmake-build-debug/CMakeFiles 0
 .PHONY : CMakeFiles/Banker_s_Algorithm.dir/rule

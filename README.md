@@ -15,6 +15,8 @@ resources will leave the system in a safe state. If it will, the resources are
 allocated; otherwise, the process must wait until some other process releases
 enough resources.
 
+    Each process will contain an array for total number of resources required.
+
   Several data structures must be maintained to implement the banker’s
 algorithm. These data structures encode the state of the resource-allocation
 system. We need the following data structures, where n is the number of
@@ -86,6 +88,16 @@ in a safe state. This algorithm can be described as follows:
     4. If Finish[i] == true for all i, then the system is in a safe state.
         This algorithm may require an order of m × n 2 operations to determine whether
         a state is safe.
+
+#Implementation
+You should invoke your program by passing the number of resources of each
+type on the command line. For example, if there were three resource types,
+with ten instances of the first type, five of the second type, and seven of the
+third type, you would invoke your program follows:
+./a.out 10 5 7
+The available array would be initialized to these values. You may initialize
+the maximum array (which holds the maximumdemand of each customer) using
+any method you find convenient.
 
 # Assignment requirements
 You may assume that you have three resources with the following number of instances (available array)

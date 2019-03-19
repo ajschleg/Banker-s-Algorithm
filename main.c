@@ -11,6 +11,21 @@ int main(int argc, char *argv[])
     /*Seed random number*/
     // srand(time(0));
 
+    if(argc < NUMBER_OF_RESOURCES+1)
+	{
+    	printf("Error\n");
+	}
+
+	/*init available array*/
+    for (int i = 1; i < argc; i++)
+	{
+		int temp;
+		temp = atoi(argv[i]);
+		available[i - 1] = temp;
+	}
+
+	print1dArray(available);
+
     /* Create n customer threads*/
 	/* An array of threads to be joined upon */
 	pthread_t customers[NUMBER_OF_CUSTOMERS]; /* the thread identifier */
@@ -30,7 +45,8 @@ int main(int argc, char *argv[])
 		pthread_join(customers[j], NULL);
 	}
 
-
+	print2dArray(maximum);
+	print2dArray(allocation);
 	release_resources(3, NULL);
 	return 0;
 }
