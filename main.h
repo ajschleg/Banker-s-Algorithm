@@ -39,5 +39,8 @@ void* thread_runner(void* param);
 
 void print2dArray(int arr[NUMBER_OF_CUSTOMERS][NUMBER_OF_RESOURCES]);
 void print1dArray(int arr[]);
+void printAll(void);
+
+void init2dArray(int arr[NUMBER_OF_CUSTOMERS][NUMBER_OF_RESOURCES]);
 
 #endif /* MAIN_H */

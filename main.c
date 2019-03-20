@@ -7,24 +7,25 @@
 
 int main(int argc, char *argv[])
 {
-	int j;
-    /*Seed random number*/
-    // srand(time(0));
-
+	srand(time(0));
     if(argc < NUMBER_OF_RESOURCES+1)
 	{
     	printf("Error\n");
 	}
 
 	/*init available array*/
-    for (int i = 1; i < argc; i++)
+    for (int i = 1; i < argc; ++i)
 	{
 		int temp;
 		temp = atoi(argv[i]);
 		available[i - 1] = temp;
 	}
 
-	print1dArray(available);
+    init2dArray(allocation);
+    init2dArray(maximum);
+    init2dArray(need);
+
+    printAll();
 
     /* Create n customer threads*/
 	/* An array of threads to be joined upon */
@@ -34,20 +35,17 @@ int main(int argc, char *argv[])
     /* get the default attributes */
     pthread_attr_init(&attr);
 
-	for(j = 0; j < NUMBER_OF_CUSTOMERS; j++)
+	for(int j = 0; j < NUMBER_OF_CUSTOMERS; j++)
 	{
 		/* create the threads */
 		pthread_create(&customers[j], &attr, thread_runner, argv[1]);
 	}
-	for(j = 0; j < NUMBER_OF_CUSTOMERS; j++)
+	for(int j = 0; j < NUMBER_OF_CUSTOMERS; j++)
 	{
 		/* wait for the thread to exit */
 		pthread_join(customers[j], NULL);
 	}
 
-	print2dArray(maximum);
-	print2dArray(allocation);
-	release_resources(3, NULL);
 	return 0;
 }
 

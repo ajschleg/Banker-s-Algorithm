@@ -6,7 +6,17 @@
 
 #IncludeRegexTransform: 
 
-/Users/austinschlegel/School/ECE408_OS/Banker-s-Algorithm/main.c
+/home/flynn/School/ECE408/Banker-s-Algorithm/initArrays.c
+stdio.h
+-
+time.h
+-
+stdlib.h
+-
+main.h
+/home/flynn/School/ECE408/Banker-s-Algorithm/main.h
+
+/home/flynn/School/ECE408/Banker-s-Algorithm/main.c
 stdio.h
 -
 stdlib.h
@@ -16,7 +26,29 @@ time.h
 pthread.h
 -
 main.h
-/Users/austinschlegel/School/ECE408_OS/Banker-s-Algorithm/main.h
+/home/flynn/School/ECE408/Banker-s-Algorithm/main.h
 
-/Users/austinschlegel/School/ECE408_OS/Banker-s-Algorithm/main.h
+/home/flynn/School/ECE408/Banker-s-Algorithm/main.h
+
+/home/flynn/School/ECE408/Banker-s-Algorithm/printFunctions.c
+stdio.h
+-
+main.h
+/home/flynn/School/ECE408/Banker-s-Algorithm/main.h
+
+/home/flynn/School/ECE408/Banker-s-Algorithm/relResources.c
+main.h
+/home/flynn/School/ECE408/Banker-s-Algorithm/main.h
+
+/home/flynn/School/ECE408/Banker-s-Algorithm/reqResources.c
+main.h
+/home/flynn/School/ECE408/Banker-s-Algorithm/main.h
+
+/home/flynn/School/ECE408/Banker-s-Algorithm/threadRunner.c
+pthread.h
+-
+stdio.h
+-
+main.h
+/home/flynn/School/ECE408/Banker-s-Algorithm/main.h
 

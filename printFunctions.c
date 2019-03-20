@@ -14,13 +14,13 @@ void print2dArray(int arr[NUMBER_OF_CUSTOMERS][NUMBER_OF_RESOURCES])
     }
     printf("\n");
 
-    /*Print n x m Maximum*/
+    /*Print n x m arr*/
     for (int i = 0; i < NUMBER_OF_CUSTOMERS; ++i)
     {
         printf("P%d ", i);
         for (int k = 0; k < NUMBER_OF_RESOURCES; ++k)
             {
-                printf("%d ", maximum[i][k]);
+                printf("%d ", arr[i][k]);
             }
         printf("\n");
     }
@@ -35,3 +35,23 @@ void print1dArray(int arr[])
     }
     printf("\n");
 }
+
+void printAll()
+{
+    printf("Avalable\n");
+    print1dArray(available);
+    printf("\n");
+
+    printf("Maximum\n");
+    print2dArray(maximum);
+    printf("\n");
+
+    printf("Allocation\n");
+    print2dArray(allocation);
+    printf("\n");
+
+    printf("Need\n");
+    print2dArray(need);
+    printf("\n");
+}
+

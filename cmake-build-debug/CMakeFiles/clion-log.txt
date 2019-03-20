@@ -1,4 +1,4 @@
-/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /Users/austinschlegel/School/ECE408_OS/Banker-s-Algorithm
+/snap/clion/61/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /home/flynn/School/ECE408/Banker-s-Algorithm
 -- Configuring done
 -- Generating done
--- Build files have been written to: /Users/austinschlegel/School/ECE408_OS/Banker-s-Algorithm/cmake-build-debug
+-- Build files have been written to: /home/flynn/School/ECE408/Banker-s-Algorithm/cmake-build-debug
