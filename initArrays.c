@@ -16,7 +16,20 @@ void initArrays(void)
 
         for (int j = 0; j < NUMBER_OF_RESOURCES; ++j)
         {
-            maximum[i][j] = rand() % 10;
+            int temp;
+            while(1)
+            {
+                temp = rand() % 10;
+                if(temp > available[j])
+                {
+                    continue;
+                }
+                else
+                {
+                    maximum[i][j] = temp;
+                    break;
+                }
+            }
         }
     }
     /*Init allocation[i][j] to random value less than maximum[i][j]*/
