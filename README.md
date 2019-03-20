@@ -89,7 +89,7 @@ in a safe state. This algorithm can be described as follows:
         This algorithm may require an order of m × n 2 operations to determine whether
         a state is safe.
 
-#Implementation
+# Implementation
 
 You should invoke your program by passing the number of resources of each type on the command line. 
 * For example, if there were three resource types, with ten instances of the first type, five of the second type, and seven of the third type, you would invoke your program follows:
