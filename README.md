@@ -76,41 +76,38 @@ leave the system in a safe state, the banker will deny it.
 ## Safety Algorithm in Section 7.5.3.1
 We can now present the algorithm for finding out whether or not a system is
 in a safe state. This algorithm can be described as follows:
-    1. Let Work and Finish be vectors of length m and n, respectively. Initialize
+   *  1. Let Work and Finish be vectors of length m and n, respectively. Initialize
         Work = Available and Finish[i] = false for i = 0, 1, ..., n − 1.
-    2. Find an index i such that both
+   *  2. Find an index i such that both
         a. Finish[i] == false
         b. Need i ≤ Work
             If no such i exists, go to step 4.
-    3. Work = Work + Allocation i
+   *  3. Work = Work + Allocation i
         Finish[i] = true
         Go to step 2.
-    4. If Finish[i] == true for all i, then the system is in a safe state.
+   *  4. If Finish[i] == true for all i, then the system is in a safe state.
         This algorithm may require an order of m × n 2 operations to determine whether
         a state is safe.
 
-#Implementation
-You should invoke your program by passing the number of resources of each
-type on the command line. For example, if there were three resource types,
-with ten instances of the first type, five of the second type, and seven of the
-third type, you would invoke your program follows:
-./a.out 10 5 7
-The available array would be initialized to these values. You may initialize
-the maximum array (which holds the maximumdemand of each customer) using
-any method you find convenient.
+# Implementation
+
+You should invoke your program by passing the number of resources of each type on the command line. 
+* For example, if there were three resource types, with ten instances of the first type, five of the second type, and seven of the third type, you would invoke your program follows:
+* ./a.out 10 5 7
+* The available array would be initialized to these values. You may initialize the maximum array (which holds the maximumdemand of each customer) using any method you find convenient.
 
 # Assignment requirements
-You may assume that you have three resources with the following number of instances (available array)
-The number of customers, n, can vary.
-Initialize your maximum array with random numbers less than available array
-Every time you make an allocation show the following:
-The request,
-Allocation,
-Available,
-Maximum, and
-Need
-Indicate whether the request was successful or denied
-In your report show an example of a denied request and a granted request and explain the results. Why was the request denied or granted.
+* You may assume that you have three resources with the following number of instances (available array)
+* The number of customers, n, can vary.
+* Initialize your maximum array with random numbers less than available array
+* Every time you make an allocation show the following:
+* The request,
+* Allocation,
+* Available,
+* Maximum, and
+* Need
+* Indicate whether the request was successful or denied
+* In your report show an example of a denied request and a granted request and explain the results. Why was the request denied or granted.
 
 ## Grading
 (4 pts) implementation of customer threads
