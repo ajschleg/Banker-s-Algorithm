@@ -41,6 +41,6 @@ void print2dArray(int arr[NUMBER_OF_CUSTOMERS][NUMBER_OF_RESOURCES]);
 void print1dArray(int arr[]);
 void printAll(void);
 
-void init2dArray(int arr[NUMBER_OF_CUSTOMERS][NUMBER_OF_RESOURCES]);
+void init2dArray(int arr[NUMBER_OF_CUSTOMERS][NUMBER_OF_RESOURCES], int a, int b);
 
 #endif /* MAIN_H */

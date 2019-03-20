@@ -17,7 +17,9 @@ int main(int argc, char *argv[])
 		exit(EXIT_FAILURE);
 	}
 
-	/*init available array*/
+	// TODO: Validate to make sure argv values are positive (and within certain range?)
+
+	/* init available array */
     for (int i = 1; i < argc; ++i)
 	{
 		int temp;
@@ -25,16 +27,26 @@ int main(int argc, char *argv[])
 		available[i - 1] = temp;
 	}
 
-	// init MAXIMUM with random numbers less than those in AVAILABLE
-    init2dArray(maximum);
+	// init MAXIMUM with random numbers less than those in AVAILABLE (and maybe not too small though)
+	int a, b;
+	for (int j = 0; j < NUMBER_OF_RESOURCES; ++j)
+    {
+		b = available[j] - 1;
+		a = 1;
+        for (int i = 0; i < NUMBER_OF_CUSTOMERS; ++i)
+        {
+            maximum[i][j] = rand() % (b - a + 1) + a;
+			need[i][j] = maximum[i][j];
+        }
+    }
 
 	// ALLOCATION is the currently allocated resources
 	// Should start at 0 and fluctuate as requests and releases are issued
-    init2dArray(allocation);
+    init2dArray(allocation, 0, 0);
 
 	// NEED should always be equal to (MAX - ALLOCATION)?
 	// I think it's just the remaining amount that each is currently able to request
-    init2dArray(need);
+	// Since allocation is initialized to 0, it should just equal MAX, so we'll allocate above with MAX
 
     printAll();
 
