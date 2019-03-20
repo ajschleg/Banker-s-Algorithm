@@ -8,9 +8,13 @@
 int main(int argc, char *argv[])
 {
 	srand(time(0));
+
+	// printf("%d\n", argc);
+
     if(argc < NUMBER_OF_RESOURCES+1)
 	{
-    	printf("Error\n");
+    	printf("Error, too few arguments\n");
+		exit(EXIT_FAILURE);
 	}
 
 	/*init available array*/
@@ -21,15 +25,22 @@ int main(int argc, char *argv[])
 		available[i - 1] = temp;
 	}
 
-    init2dArray(allocation);
+	// init MAXIMUM with random numbers less than those in AVAILABLE
     init2dArray(maximum);
+
+	// ALLOCATION is the currently allocated resources
+	// Should start at 0 and fluctuate as requests and releases are issued
+    init2dArray(allocation);
+
+	// NEED should always be equal to (MAX - ALLOCATION)?
+	// I think it's just the remaining amount that each is currently able to request
     init2dArray(need);
 
     printAll();
 
     /* Create n customer threads*/
 	/* An array of threads to be joined upon */
-	pthread_t customers[NUMBER_OF_CUSTOMERS]; /* the thread identifier */
+	pthread_t customer[NUMBER_OF_CUSTOMERS]; /* the thread identifier */
 	pthread_attr_t attr; /* set of thread attributes */
 
     /* get the default attributes */
@@ -38,12 +49,12 @@ int main(int argc, char *argv[])
 	for(int j = 0; j < NUMBER_OF_CUSTOMERS; j++)
 	{
 		/* create the threads */
-		pthread_create(&customers[j], &attr, thread_runner, argv[1]);
+		pthread_create(&customer[j], &attr, thread_runner, argv[1]);
 	}
 	for(int j = 0; j < NUMBER_OF_CUSTOMERS; j++)
 	{
 		/* wait for the thread to exit */
-		pthread_join(customers[j], NULL);
+		pthread_join(customer[j], NULL);
 	}
 
 	return 0;

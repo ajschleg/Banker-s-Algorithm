@@ -17,7 +17,7 @@ void print2dArray(int arr[NUMBER_OF_CUSTOMERS][NUMBER_OF_RESOURCES])
     /*Print n x m arr*/
     for (int i = 0; i < NUMBER_OF_CUSTOMERS; ++i)
     {
-        printf("P%d ", i);
+        printf("C%d ", i);
         for (int k = 0; k < NUMBER_OF_RESOURCES; ++k)
             {
                 printf("%d ", arr[i][k]);
@@ -38,7 +38,7 @@ void print1dArray(int arr[])
 
 void printAll()
 {
-    printf("Avalable\n");
+    printf("Available\n");
     print1dArray(available);
     printf("\n");
 
