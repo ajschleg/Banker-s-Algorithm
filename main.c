@@ -57,13 +57,14 @@ int main(int argc, char *argv[])
 
     /* get the default attributes */
     pthread_attr_init(&attr);
-	
+
 	for(int j = 0; j < NUMBER_OF_CUSTOMERS; j++)
 	{
 		/* create the threads */
 		int *customer_num = (int*)malloc(sizeof(int));
 		*customer_num = j;
 		pthread_create(&customer[j], &attr, thread_runner, customer_num);
+		printf("Customer #%d has thread id: %lu\n", j, customer[j]);
 	}
 	for(int j = 0; j < NUMBER_OF_CUSTOMERS; j++)
 	{

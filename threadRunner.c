@@ -10,7 +10,7 @@
 void* thread_runner(void* param)
 {
     int* customer_num = param;
-    printf("In thread for customer #%d\n", *customer_num);
+    printf("In thread for customer #%d\nMy thread id is: %lu\n", *customer_num, pthread_self());
     
     int request[NUMBER_OF_RESOURCES];
     // randomize a request (not greater than need)
