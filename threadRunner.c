@@ -3,11 +3,13 @@
 //
 #include <pthread.h>
 #include <stdio.h>
+#include <stdlib.h>
 
 #include "main.h"
 
 void* thread_runner(void* param)
 {
-    printf("In thread\n");
+    int* customer_num = param;
+    printf("In thread for customer #%d\n", *customer_num);
     pthread_exit(0);
 }
