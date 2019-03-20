@@ -21,9 +21,8 @@ int main(int argc, char *argv[])
 		available[i - 1] = temp;
 	}
 
-    init2dArray(allocation);
-    init2dArray(maximum);
-    init2dArray(need);
+	/*Init arrays*/
+    initArrays();
 
     printAll();
 

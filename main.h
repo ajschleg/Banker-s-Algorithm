@@ -14,15 +14,6 @@ int allocation[NUMBER_OF_CUSTOMERS][NUMBER_OF_RESOURCES];
 /* the remaining need of each customer */
 int need[NUMBER_OF_CUSTOMERS][NUMBER_OF_RESOURCES];
 
-struct Customer
-{
-
-};
-
-struct Banker
-{
-
-};
 
 
 /*
@@ -41,6 +32,6 @@ void print2dArray(int arr[NUMBER_OF_CUSTOMERS][NUMBER_OF_RESOURCES]);
 void print1dArray(int arr[]);
 void printAll(void);
 
-void init2dArray(int arr[NUMBER_OF_CUSTOMERS][NUMBER_OF_RESOURCES]);
+void initArrays(void);
 
 #endif /* MAIN_H */

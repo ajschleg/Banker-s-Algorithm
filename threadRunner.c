@@ -9,5 +9,6 @@
 void* thread_runner(void* param)
 {
     printf("In thread\n");
+    
     pthread_exit(0);
 }
