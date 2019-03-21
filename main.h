@@ -13,8 +13,19 @@ int maximum[NUMBER_OF_CUSTOMERS][NUMBER_OF_RESOURCES];
 int allocation[NUMBER_OF_CUSTOMERS][NUMBER_OF_RESOURCES];
 /* the remaining need of each customer */
 int need[NUMBER_OF_CUSTOMERS][NUMBER_OF_RESOURCES];
+/* The work work after each successful process*/
+int work[NUMBER_OF_RESOURCES];
 
 
+struct thread
+{
+    int ID_;
+    int status_;
+};
+
+/* Keep track of each process status, finished or not*/
+struct thread* finish[NUMBER_OF_CUSTOMERS];
+struct thread structthread[NUMBER_OF_CUSTOMERS];
 
 /*
 These two functions should return 0 if successful (the request has been
