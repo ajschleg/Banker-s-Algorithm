@@ -93,36 +93,32 @@ int request_resources(int customer_num, int request[])
 	{
 		if (!finish[i])
 		{
+			// check that need is <= to work for all resources
 			for (int j = 0; j < NUMBER_OF_RESOURCES; ++j)
 			{
-				if (need[i][j] <= work[j])
+				if (need[i][j] > work[j])
 				{
-					// Since finish will remain false for this i,
-					// system will not be safe
-					// Go to step IV
-					unsafe = 1;
+					unsafe = 1;	// should loop back and recheck?
 					break;
 				}
 			}
-			// If unsafe was set true, then unsafe state,
-			// break and go to step IV which resets state
-			if (unsafe) {
-				break;
-			}
-
-			// If made it here, then (Need[sub i] <= work) for all resources, so do step III
-
-			/* III. Work = Work + Allocation[sub i]
-			* 			Finish[i] = true
-			* 		
-			* 		Go to step II (continue loop with next customer)
-			*
-			*/
-			for (int j = 0; j < NUMBER_OF_RESOURCES; ++j)
+			// if so, place in safe sequence
+			if (!unsafe)
 			{
-				work[j] += allocation[i][j];
+				for (int j = 0; j < NUMBER_OF_RESOURCES; ++j)
+				{
+					work[j] += allocation[i][j];
+				}
+				printf("setting finish[%d] = 1\n", i);
+				finish[i] = 1;
 			}
-			finish[i] = 1;
+			else
+			{
+				// Do something else? or just leave finish = 0 ?
+				// Should loop over customers again?
+			}
+
+
 		}
 	}
 
