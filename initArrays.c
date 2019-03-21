@@ -7,55 +7,32 @@
 
 #include "main.h"
 
-void initArrays(void)
+void initCustomerArrays(void)
 {
 
-    /*Init maximum array to random value between 0 and 10*/
-    for (int i = 0; i < NUMBER_OF_CUSTOMERS; ++i)
+    /* Init maximum array to random values less than those in available array */
+	int a, b;
+	for (int j = 0; j < NUMBER_OF_RESOURCES; ++j)
     {
-
-        for (int j = 0; j < NUMBER_OF_RESOURCES; ++j)
+		b = available[j] - 1;
+		a = 1;
+        for (int i = 0; i < NUMBER_OF_CUSTOMERS; ++i)
         {
-            int temp;
-            while(1)
-            {
-                temp = rand() % 10;
-                if(temp > available[j])
-                {
-                    continue;
-                }
-                else
-                {
-                    maximum[i][j] = temp;
-                    break;
-                }
-            }
-        }
-    }
-    /*Init allocation[i][j] to random value less than maximum[i][j]*/
-    for (int i = 0; i < NUMBER_OF_CUSTOMERS; ++i)
-    {
-
-        for (int j = 0; j < NUMBER_OF_RESOURCES; ++j)
-        {
-            int temp;
-            while(1)
-            {
-                temp = rand() % 10;
-                if(temp > maximum[i][j])
-                {
-                    continue;
-                }
-                else
-                {
-                    allocation[i][j] = temp;
-                    break;
-                }
-            }
+            maximum[i][j] = rand() % (b - a + 1) + a;
+			need[i][j] = maximum[i][j];
         }
     }
 
-    /*Calculate the need*/
+    /* Init allocation array with 0s (no resources currently allocated)  */
+    for (int i = 0; i < NUMBER_OF_CUSTOMERS; ++i)
+    {
+        for (int j = 0; j < NUMBER_OF_RESOURCES; ++j)
+        {
+           allocation[i][j] = 0;
+        }
+    }
+
+    /* Need = Maximum - Allocation */
     for (int i = 0; i < NUMBER_OF_CUSTOMERS; ++i)
     {
         for (int j = 0; j < NUMBER_OF_RESOURCES; ++j)
@@ -67,10 +44,10 @@ void initArrays(void)
     /*Init Work and finish
      * 1. Let Work and Finish be vectors of length m and n, respectively. Initialize
         Work = Available and Finish[i] = false for i = 0, 1, ..., n − 1.*/
-    for (int i = 0; i < NUMBER_OF_RESOURCES; ++i)
-    {
-        work[i] = available[i];
-    }
+    // for (int i = 0; i < NUMBER_OF_RESOURCES; ++i)
+    // {
+    //     work[i] = available[i];
+    // }
 
     /* Finish will be init to 0.
      * 0 - false

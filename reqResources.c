@@ -4,11 +4,11 @@
 
 int request_resources(int customer_num, int request[])
 {
-	/* Mutex locks*/
+
 	printf("Locked. ID: %d Trying to request resources...\n", customer_num);
 
 
-
+	/* Check if enough resources available to fill request */
 	for (int i = 0; i < NUMBER_OF_RESOURCES; ++i)
 	{
 		printf("ID: %d Checking if %d <= %d\n", customer_num, request[i], work[i]);
@@ -20,7 +20,10 @@ int request_resources(int customer_num, int request[])
 		}
 	}
 
-	/*Check if last element*/
+	/* If we got here, there are enough resources.
+	 * Now, we need to check if granting the request
+	 * will leave the system in a safe state
+	 */
 	printf("ID: %d GRANTED\n", customer_num);
 	/*If last element calculate new work and set status = 1
 	 * new work = work + allocation for ID_

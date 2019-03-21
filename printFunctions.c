@@ -38,7 +38,7 @@ void print1dArray(int arr[])
 
 void printAll()
 {
-    printf("Avalable\n");
+    printf("Available\n");
     print1dArray(available);
     printf("\n");
 

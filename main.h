@@ -18,16 +18,25 @@ int need[NUMBER_OF_CUSTOMERS][NUMBER_OF_RESOURCES];
 /* The work work after each successful process*/
 int work[NUMBER_OF_RESOURCES];
 
+typedef struct {
+  int invoked;  // bool to tell if request has been invoked
+  int resources[NUMBER_OF_RESOURCES];
+} request_t;
 
-struct thread
-{
-    int ID_;
-    int status_;
-};
+typedef struct {
+  int invoked;  // bool to tell if release has been invoked
+  int resources[NUMBER_OF_RESOURCES];
+} release_t;
+
+typedef struct {
+  int customer_num;
+  request_t request;
+  release_t release;
+} thread_params_t;
 
 /* Keep track of each process status, finished or not*/
-struct thread* finish[NUMBER_OF_CUSTOMERS];
-struct thread structthread[NUMBER_OF_CUSTOMERS];
+thread_params_t* param_ptrs[NUMBER_OF_CUSTOMERS];
+// thread_params_t params[NUMBER_OF_CUSTOMERS];
 
 pthread_mutex_t mutex;
 
@@ -47,6 +56,6 @@ void print2dArray(int arr[NUMBER_OF_CUSTOMERS][NUMBER_OF_RESOURCES]);
 void print1dArray(int arr[]);
 void printAll(void);
 
-void initArrays(void);
+void initCustomerArrays(void);
 
 #endif /* MAIN_H */
