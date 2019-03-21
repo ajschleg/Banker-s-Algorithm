@@ -14,27 +14,28 @@ void* thread_runner(void* param)
     printf("Thread ID: %d\n", params->customer_num);
 
     // while(!exit)
-
-    if (params->request.invoked)
+    while(1)
     {
-        pthread_mutex_lock(&mutex);
+        if (params->request.invoked)
+        {
+            pthread_mutex_lock(&mutex);
 
-        /*If not finished then try to req resources*/
-        request_resources(params->customer_num, params->request.resources);
+            /*If not finished then try to req resources*/
+            request_resources(params->customer_num, params->request.resources);
 
-        pthread_mutex_unlock(&mutex);
+            pthread_mutex_unlock(&mutex);
+            params->request.invoked = 0;
 
-    } else if(params->release.invoked) {
-        pthread_mutex_lock(&mutex);
+        } else if(params->release.invoked) {
+            pthread_mutex_lock(&mutex);
 
-        /*If not finished then try to req resources*/
-        release_resources(params->customer_num, params->release.resources);
+            /*If not finished then try to req resources*/
+            release_resources(params->customer_num, params->release.resources);
 
-        pthread_mutex_unlock(&mutex);
-    } else {
-        /*Probably wont get here if this process is finished */
+            pthread_mutex_unlock(&mutex);
+            params->release.invoked = 0;
+        }
     }
-
 
     pthread_exit(0);
 }

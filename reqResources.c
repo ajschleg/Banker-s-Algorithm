@@ -5,7 +5,7 @@
 int request_resources(int customer_num, int request[])
 {
 
-	printf("Locked. ID: %d - Issuing request...\n", customer_num);
+	printf("Customer # %d - Issuing request...\n", customer_num);
 
 	/* Step 1: Check if request is within need */
 	for (int i = 0; i < NUMBER_OF_RESOURCES; ++i)
@@ -157,11 +157,13 @@ int request_resources(int customer_num, int request[])
 			}
 
 			// Request not granted, return denied
+			printf("Request Denied: System would be left in unsafe state\n");
 			return -1;
 		}
 	}
 
 	// If made it here, resources were allocated
 	// Request granted, return success
+	printf("Customer # %d - Request granted.\n", customer_num);
 	return 0;
 }
