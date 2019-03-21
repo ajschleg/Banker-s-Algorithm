@@ -10,7 +10,7 @@ int request_resources(int customer_num, int request[])
 
 	for (int i = 0; i < NUMBER_OF_RESOURCES; ++i)
 	{
-	    printf("Checking if %d <= %d\n", request[i], work[i]);
+	    printf("ID: %d Checking if %d <= %d\n", customer_num, request[i], work[i]);
 		if(request[i] <= work[i])
 		{
 			/*Check if last element*/
@@ -31,7 +31,7 @@ int request_resources(int customer_num, int request[])
                 pthread_mutex_unlock(&mutex);
                 //end critical section
 			}
-			/*Go to next and check*/
+			/*else go to next and check*/
 		}
 		else
 		{
