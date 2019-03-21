@@ -7,6 +7,8 @@
 #define NUMBER_OF_CUSTOMERS 5
 #define NUMBER_OF_RESOURCES 3
 
+#define	ARGLEN		40				/* token length	*/
+
 /* the available amount of each resource */
 int available[NUMBER_OF_RESOURCES];
 /*the maximum demand of each customer */
@@ -55,6 +57,8 @@ void* thread_runner(void* param);
 void print2dArray(int arr[NUMBER_OF_CUSTOMERS][NUMBER_OF_RESOURCES]);
 void print1dArray(int arr[]);
 void printAll(void);
+
+void stringToint(void);
 
 void initCustomerArrays(void);
 

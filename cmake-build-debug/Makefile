@@ -177,6 +177,33 @@ main.c.s:
 	$(MAKE) -f CMakeFiles/Banker_s_Algorithm.dir/build.make CMakeFiles/Banker_s_Algorithm.dir/main.c.s
 .PHONY : main.c.s
 
+parser.o: parser.c.o
+
+.PHONY : parser.o
+
+# target to build an object file
+parser.c.o:
+	$(MAKE) -f CMakeFiles/Banker_s_Algorithm.dir/build.make CMakeFiles/Banker_s_Algorithm.dir/parser.c.o
+.PHONY : parser.c.o
+
+parser.i: parser.c.i
+
+.PHONY : parser.i
+
+# target to preprocess a source file
+parser.c.i:
+	$(MAKE) -f CMakeFiles/Banker_s_Algorithm.dir/build.make CMakeFiles/Banker_s_Algorithm.dir/parser.c.i
+.PHONY : parser.c.i
+
+parser.s: parser.c.s
+
+.PHONY : parser.s
+
+# target to generate assembly for a file
+parser.c.s:
+	$(MAKE) -f CMakeFiles/Banker_s_Algorithm.dir/build.make CMakeFiles/Banker_s_Algorithm.dir/parser.c.s
+.PHONY : parser.c.s
+
 printFunctions.o: printFunctions.c.o
 
 .PHONY : printFunctions.o
@@ -300,6 +327,9 @@ help:
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... parser.o"
+	@echo "... parser.i"
+	@echo "... parser.s"
 	@echo "... printFunctions.o"
 	@echo "... printFunctions.i"
 	@echo "... printFunctions.s"

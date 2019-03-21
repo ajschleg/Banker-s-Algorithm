@@ -5,6 +5,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/Banker_s_Algorithm.dir/threadRunner.c.o"
   "CMakeFiles/Banker_s_Algorithm.dir/printFunctions.c.o"
   "CMakeFiles/Banker_s_Algorithm.dir/initArrays.c.o"
+  "CMakeFiles/Banker_s_Algorithm.dir/parser.c.o"
   "Banker_s_Algorithm.pdb"
   "Banker_s_Algorithm"
 )
