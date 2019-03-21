@@ -40,24 +40,4 @@ void initCustomerArrays(void)
             need[i][j] = maximum[i][j] - allocation[i][j];
         }
     }
-
-    /*Init Work and finish
-     * 1. Let Work and Finish be vectors of length m and n, respectively. Initialize
-        Work = Available and Finish[i] = false for i = 0, 1, ..., n − 1.*/
-    // for (int i = 0; i < NUMBER_OF_RESOURCES; ++i)
-    // {
-    //     work[i] = available[i];
-    // }
-
-    /* Finish will be init to 0.
-     * 0 - false
-     * 1 - True
-     * */
-    // for (int i = 0; i < NUMBER_OF_CUSTOMERS; ++i)
-    // {
-    //     structthread[i].ID_ = i;
-    //     structthread[i].status_ = 0;
-
-    //     finish[i] = &structthread[i];
-    // }
 }

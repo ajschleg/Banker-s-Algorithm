@@ -8,7 +8,7 @@
 
 int main(int argc, char *argv[])
 {
-	int should_run = 1;
+	int 	should_run = 1;
 	char	input[ARGLEN];			/* read stuff here	*/
 
 	pthread_mutex_init(&mutex, NULL);
@@ -66,7 +66,7 @@ int main(int argc, char *argv[])
 			should_run = 0;
 		}
 
-
+		parseInput(input);
 	}
 
 	for(int j = 0; j < NUMBER_OF_CUSTOMERS; j++)
