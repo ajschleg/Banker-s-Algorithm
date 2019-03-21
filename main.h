@@ -20,6 +20,8 @@ int need[NUMBER_OF_CUSTOMERS][NUMBER_OF_RESOURCES];
 /* The work work after each successful process*/
 int work[NUMBER_OF_RESOURCES];
 
+int should_run;
+
 typedef struct {
   int invoked;  // bool to tell if request has been invoked
   int resources[NUMBER_OF_RESOURCES];

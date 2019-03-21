@@ -14,7 +14,7 @@ void* thread_runner(void* param)
     printf("Thread ID: %d\n", params->customer_num);
 
     // while(!exit)
-    while(1)
+    while(should_run)
     {
         if (params->request.invoked)
         {

@@ -8,7 +8,7 @@
 
 int main(int argc, char *argv[])
 {
-	int 	should_run = 1;
+	should_run = 1;
 	char	input[ARGLEN];			/* read stuff here	*/
 
 	pthread_mutex_init(&mutex, NULL);
@@ -76,6 +76,11 @@ int main(int argc, char *argv[])
 	}
 
 	// Don't forget to free param_ptrs!
+	for(int j = 0; j < NUMBER_OF_CUSTOMERS; j++)
+	{
+		free(param_ptrs[j]);
+	}
+
 
 	printAll();
 
