@@ -41,6 +41,9 @@ int main(int argc, char *argv[])
 	{
 		/* create the threads */
 		param_ptrs[j] = (thread_params_t *) malloc(sizeof(thread_params_t));
+		param_ptrs[j]->customer_num = j;
+		param_ptrs[j]->request.invoked = 0;
+		param_ptrs[j]->release.invoked = 0;
 		pthread_create(&customers[j], &attr, thread_runner, param_ptrs[j]);
 	}
 

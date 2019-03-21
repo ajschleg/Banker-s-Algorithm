@@ -9,23 +9,29 @@
 void* thread_runner(void* param)
 {
     /*Use temp to access and change thread status*/
-    struct thread* temp = (struct thread *)param;
+    thread_params_t* params = (thread_params_t *)param;
 
-    printf("Thread ID: %d\n---Status: %d\n", temp->ID_, temp->status_);
+    printf("Thread ID: %d\n", params->customer_num);
 
+    // while(!exit)
 
-    if (temp->status_ == 0)
+    if (params->request.invoked)
     {
         pthread_mutex_lock(&mutex);
 
         /*If not finished then try to req resources*/
-        request_resources(temp->ID_, &need[temp->ID_][0]);
+        request_resources(params->customer_num, params->request.resources);
 
         pthread_mutex_unlock(&mutex);
 
-    }
-    else
-    {
+    } else if(params->release.invoked) {
+        pthread_mutex_lock(&mutex);
+
+        /*If not finished then try to req resources*/
+        release_resources(params->customer_num, params->release.resources);
+
+        pthread_mutex_unlock(&mutex);
+    } else {
         /*Probably wont get here if this process is finished */
     }
 

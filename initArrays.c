@@ -53,11 +53,11 @@ void initCustomerArrays(void)
      * 0 - false
      * 1 - True
      * */
-    for (int i = 0; i < NUMBER_OF_CUSTOMERS; ++i)
-    {
-        structthread[i].ID_ = i;
-        structthread[i].status_ = 0;
+    // for (int i = 0; i < NUMBER_OF_CUSTOMERS; ++i)
+    // {
+    //     structthread[i].ID_ = i;
+    //     structthread[i].status_ = 0;
 
-        finish[i] = &structthread[i];
-    }
+    //     finish[i] = &structthread[i];
+    // }
 }
