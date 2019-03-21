@@ -5,7 +5,7 @@
 int request_resources(int customer_num, int request[])
 {
 
-	printf("Locked. ID: %d Trying to request resources...\n", customer_num);
+	printf("Locked. ID: %d - Issuing request...\n", customer_num);
 
 
 	/* Check if enough resources available to fill request */
