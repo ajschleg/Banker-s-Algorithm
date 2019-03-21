@@ -4,42 +4,37 @@
 
 int request_resources(int customer_num, int request[])
 {
-	/*Mutex locks*/
-	pthread_mutex_t mutex = PTHREAD_MUTEX_INITIALIZER;
-	printf("Trying to request resources...\n");
+	/* Mutex locks*/
+	printf("Locked. ID: %d Trying to request resources...\n", customer_num);
+
+
 
 	for (int i = 0; i < NUMBER_OF_RESOURCES; ++i)
 	{
-	    printf("ID: %d Checking if %d <= %d\n", customer_num, request[i], work[i]);
-		if(request[i] <= work[i])
+		printf("ID: %d Checking if %d <= %d\n", customer_num, request[i], work[i]);
+		if (request[i] > work[i])
 		{
-			/*Check if last element*/
-			if(i+1 == NUMBER_OF_RESOURCES)
- 			{
-			    printf("REQ\n");
-				/*If last element calculate new work and set status = 1
-				 * new work = work + allocation for ID_*/
-				//critical section
-				pthread_mutex_lock(&mutex);
-				printf("new work = [");
-                for (int j = 0; j < NUMBER_OF_RESOURCES; ++j)
-                {
-                    work[j] = work[j] + allocation[customer_num][j];
-                    printf("%d, ", work[j]);
-                }
-                printf("]\n");
-                pthread_mutex_unlock(&mutex);
-                //end critical section
-			}
-			/*else go to next and check*/
-		}
-		else
-		{
-		    printf("Denied\n");
+			printf("Denied\n");
 			/*not enough resources, exit*/
-			 break;
+			return -1;
 		}
-
 	}
-	return customer_num;
+
+	/*Check if last element*/
+	printf("ID: %d GRANTED\n", customer_num);
+	/*If last element calculate new work and set status = 1
+	 * new work = work + allocation for ID_
+	 * */
+
+	printf("new work = [");
+	for (int j = 0; j < NUMBER_OF_RESOURCES; ++j)
+	{
+		work[j] = work[j] + allocation[customer_num][j];
+		printf("%d, ", work[j]);
+	}
+	printf("] after ID: %d\n", customer_num);
+
+	/*else go to next and check*/
+
+	return 1;
 }

@@ -7,6 +7,7 @@
 
 int main(int argc, char *argv[])
 {
+	pthread_mutex_init(&mutex, NULL);
 
 	srand(time(0));
     if(argc < NUMBER_OF_RESOURCES+1)
@@ -22,7 +23,7 @@ int main(int argc, char *argv[])
 		available[i - 1] = temp;
 	}
 
-	/*Init arrays*/
+	/*Init other arrays*/
     initArrays();
 
     printAll();

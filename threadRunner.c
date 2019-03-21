@@ -14,11 +14,15 @@ void* thread_runner(void* param)
     printf("Thread ID: %d\n---Status: %d\n", temp->ID_, temp->status_);
 
 
-    /*Check if process is not finished*/
     if (temp->status_ == 0)
     {
+        pthread_mutex_lock(&mutex);
+
         /*If not finished then try to req resources*/
         request_resources(temp->ID_, &need[temp->ID_][0]);
+
+        pthread_mutex_unlock(&mutex);
+
     }
     else
     {

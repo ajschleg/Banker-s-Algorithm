@@ -1,6 +1,8 @@
 #ifndef MAIN_H
 #define MAIN_H
 
+#include <pthread.h>
+
 /* these may be any values >= 0 */
 #define NUMBER_OF_CUSTOMERS 5
 #define NUMBER_OF_RESOURCES 3
@@ -27,6 +29,7 @@ struct thread
 struct thread* finish[NUMBER_OF_CUSTOMERS];
 struct thread structthread[NUMBER_OF_CUSTOMERS];
 
+pthread_mutex_t mutex;
 
 /*
 These two functions should return 0 if successful (the request has been
