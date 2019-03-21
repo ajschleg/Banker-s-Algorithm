@@ -15,8 +15,6 @@ resources will leave the system in a safe state. If it will, the resources are
 allocated; otherwise, the process must wait until some other process releases
 enough resources.
 
-    Each process will contain an array for total number of resources required.
-
   Several data structures must be maintained to implement the banker’s
 algorithm. These data structures encode the state of the resource-allocation
 system. We need the following data structures, where n is the number of
@@ -52,7 +50,7 @@ of resource type R j to complete its task. Note that Need[i][j] equals Max[i][j]
 To simplify the presentation of the banker’s algorithm, we next establish
 some notation. Let X and Y be vectors of length n. We say that X ≤ Y if and
 only if X[i] ≤ Y[i] for all i = 1, 2, ..., n. For example, if X = (1,7,3,2) and Y =
-(0,3,2,1), then Y ≤ X. In addition, Y < X if Y ≤ X and Y = X.
+(0,3,2,1), then Y ≤ X. In addition, Y < X if Y ≤ X and Y != X.
 
   We can treat each row in the matrices Allocation and Need as vectors
 and refer to them as Allocation i and Need i . The vector Allocation i specifies
@@ -60,7 +58,7 @@ the resources currently allocated to process P i ; the vector Need i specifies t
 additional resources that process P i may still request to complete its task.
 
 This programming assignment combines three separate topics:
-(1) multithreading, (2) preventing race conditions, and (3) deadlock avoidance.
+(1) multi-threading, (2) preventing race conditions, and (3) deadlock avoidance.
 
 ## The Banker
 The banker will consider requests from n customers for m resources types.
@@ -89,6 +87,25 @@ in a safe state. This algorithm can be described as follows:
         This algorithm may require an order of m × n 2 operations to determine whether
         a state is safe.
 
+## 7.5.3.2 Resource-Request Algorithm
+Next, we describe the algorithm for determining whether requests can be safely
+granted.
+Let Requesti be the request vector for process Pi . If Requesti[j] == k, then
+process Pi wants k instances of resource type Rj . When a request for resources
+is made by process Pi , the following actions are taken:
+* 1. If Request[i] ≤Need[i] , go to step 2. Otherwise, raise an error condition, since
+    the process has exceeded its maximum claim.
+* 2. If Request[i] ≤ Available, go to step 3. Otherwise, Pi must wait, since the
+    resources are not available.
+* 3. Have the system pretend to have allocated the requested resources to
+    process Pi by modifying the state as follows:
+        Available = Available–Request[i] ;
+        Allocation[i] = Allocation[i] + Request[i] ;
+        Need[i] = Need[i] – Request[i] ;
+    If the resulting resource-allocation state is safe, the transaction is completed,
+    and process Pi is allocated its resources. However, if the new state
+    is unsafe, then Pi must wait for Request[i] , and the old resource-allocation
+    state is restored.
 # Implementation
 
 You should invoke your program by passing the number of resources of each type on the command line. 

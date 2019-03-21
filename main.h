@@ -27,6 +27,7 @@ struct thread
 struct thread* finish[NUMBER_OF_CUSTOMERS];
 struct thread structthread[NUMBER_OF_CUSTOMERS];
 
+
 /*
 These two functions should return 0 if successful (the request has been
 granted) and –1 if unsuccessful. Multiple threads (customers) will concurrently
