@@ -2,11 +2,15 @@
 #include <stdlib.h>
 #include <time.h>
 #include <pthread.h>
+#include <string.h>
 
 #include "main.h"
 
 int main(int argc, char *argv[])
 {
+	int should_run = 1;
+	char	input[ARGLEN];			/* read stuff here	*/
+
 	pthread_mutex_init(&mutex, NULL);
 
 	srand(time(0));
@@ -45,6 +49,24 @@ int main(int argc, char *argv[])
 		param_ptrs[j]->request.invoked = 0;
 		param_ptrs[j]->release.invoked = 0;
 		pthread_create(&customers[j], &attr, thread_runner, param_ptrs[j]);
+	}
+
+	while(should_run)
+	{
+		printf(":>");
+
+		/*get input*/
+		fgets(input, ARGLEN, stdin);
+
+		fflush(stdout);
+
+		/*Check is exit*/
+		if (!strcmp(input, "exit\n"))
+		{
+			should_run = 0;
+		}
+
+
 	}
 
 	for(int j = 0; j < NUMBER_OF_CUSTOMERS; j++)
