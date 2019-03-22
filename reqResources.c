@@ -92,11 +92,9 @@ int request_resources(int customer_num, int request[])
 	 * 		If found, go to step III
 	 * 		If no such i exists, go to step IV
 	 */
+	printf("Calculating if safe state... \n{\n");
     for (int j = 0; j < NUMBER_OF_CUSTOMERS; ++j) {
-        for (int i = 0; i < NUMBER_OF_CUSTOMERS; ++i) {
-            printf("%d ", finish[i]);
-            printf("\n");
-        }
+
         if(finishCheck(finish, work))
         {
             continue;
@@ -106,6 +104,7 @@ int request_resources(int customer_num, int request[])
             break;
         }
     }
+    printf("}\n");
 
 
 	/* IV. If Finish[i] == 'true' for all i,
@@ -157,7 +156,7 @@ int finishCheck(int finish[NUMBER_OF_CUSTOMERS], int work[NUMBER_OF_RESOURCES])
     int unsafe = 0;
     int zero_count = 0;
 
-    printf("TEST\n");
+    //printf("TEST\n");
 
     for (int i = 0; i < NUMBER_OF_CUSTOMERS; ++i)
     {
@@ -174,7 +173,7 @@ int finishCheck(int finish[NUMBER_OF_CUSTOMERS], int work[NUMBER_OF_RESOURCES])
                 }
             }
             // if so, place in safe sequence
-            if (!unsafe)    
+            if (!unsafe)
             {
                 for (int j = 0; j < NUMBER_OF_RESOURCES; ++j)
                 {
