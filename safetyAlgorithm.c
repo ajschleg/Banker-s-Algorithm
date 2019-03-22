@@ -10,12 +10,24 @@ int safe_sequence_check(int curr_index, int seq[])
   int arr_size = NUMBER_OF_CUSTOMERS - curr_index;
   int sequence[arr_size];
   printf("Current sequence, starting at index %d: [", curr_index);
-  for (int i = 0; i < arr_size; ++i)
+  if (curr_index == 0)
   {
-    sequence[i] = seq[i + curr_index];
-    printf(" %d ", sequence[i]);
+    for (int i = 0; i < arr_size; ++i)
+    {
+      sequence[i] = seq[i]; // don't offset on initial call
+      printf(" %d ", sequence[i]);
+    }
+    printf("]\n");
   }
-  printf("]\n");
+  else
+  {
+    for (int i = 0; i < arr_size; ++i)
+    {
+      sequence[i] = seq[i + 1];
+      printf(" %d ", sequence[i]);
+    }
+    printf("]\n");
+  }
 
   int valid;
 	// starting at first element of sequence array, use as customer index
@@ -58,7 +70,7 @@ int safe_sequence_check(int curr_index, int seq[])
 			}
 
       printf("valid sequence for index %d as customer %d, testing next index...\n", curr_index, p);
-      if (safe_sequence_check(curr_index + 1, sequence))
+      if (safe_sequence_check(curr_index + 1, &sequence[0]))
       {
         // could copy valid sequence portion back to pass in array before returning
         // so that caller will know know the final valid sequence
