@@ -81,29 +81,22 @@ int request_resources(int customer_num, int request[])
 		sequence[i] = i;
 	}
 
-	
-	if (safe_sequence_check(0, sequence));
-	{
-		// There is a safe sequence, grant the request
-		printf("Safe sequence found\n");
+	int safe_status = safe_sequence_check(0, sequence);
 
-
-		return 0;
-	}
+	// There is a safe sequence, grant the request
+	printf("Safe sequence result: %d\n", safe_status);
 
 
 
+	// // Request not granted, return denied
+	// printf("Request Denied: System would be left in unsafe state\n");
+	// return -1;
 
-
-	// Request not granted, return denied
-	printf("Request Denied: System would be left in unsafe state\n");
-	return -1;
-
-	// undo allocation here?
+	// // undo allocation here?
 	
 
 	// If made it here, resources were allocated
 	// Request granted, return success
-	printf("Customer # %d - Request granted.\n", customer_num);
+	printf("Customer # %d - Request granted. (no reversal logic in place)\n", customer_num);
 	return 0;
 }

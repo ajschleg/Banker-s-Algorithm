@@ -61,6 +61,7 @@ int safe_sequence_check(int curr_index, int seq[])
       // if this is the last element of the sequence, just return valid
       if (arr_size == 1)
       {
+        printf("Valid sequence found with customer %d in index %d (last element), returning true...\n", p, curr_index);
         return 1;
       }
 
