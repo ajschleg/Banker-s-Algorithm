@@ -75,28 +75,45 @@ int request_resources(int customer_num, int request[])
 	for (int i = 0; i < NUMBER_OF_RESOURCES; ++i)
 	{
 		work[i] = available[i];
+		printf("Work[%d] = Available[%d] =>  %d = %d\n", i, i, work[i], available[i]);
 	}
 	for (int i = 0; i < NUMBER_OF_CUSTOMERS; ++i)
 	{
 		sequence[i] = i;
 	}
 
-	int safe_status = safe_sequence_check(0, sequence);
+	int safe_status = safe_sequence_check(0, sequence, work);
 
 	// There is a safe sequence, grant the request
-	printf("Safe sequence result: %d\n", safe_status);
+	printf("Safe sequence result status: %d\n", safe_status);
 
+	if (safe_status == 0)
+	{
+		printf("Request Denied: System would be left in unsafe state\n");
 
+		// reverse state
 
-	// // Request not granted, return denied
-	// printf("Request Denied: System would be left in unsafe state\n");
-	// return -1;
+		for (int i = 0; i < NUMBER_OF_RESOURCES; ++i)
+		{
+			available[i] += request[i];
+		}
 
-	// // undo allocation here?
+		for (int i = 0; i < NUMBER_OF_RESOURCES; ++i)
+		{
+			allocation[customer_num][i] -= request[i];
+		}
+
+		for (int i = 0; i < NUMBER_OF_RESOURCES; ++i)
+		{
+			need[customer_num][i] += request[i];
+		}
+
+		return -1;
+	}
 	
 
 	// If made it here, resources were allocated
 	// Request granted, return success
-	printf("Customer # %d - Request granted. (no reversal logic in place)\n", customer_num);
+	printf("Customer # %d - Request granted.\n", customer_num);
 	return 0;
 }

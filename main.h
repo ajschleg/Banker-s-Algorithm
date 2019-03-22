@@ -17,8 +17,6 @@ int maximum[NUMBER_OF_CUSTOMERS][NUMBER_OF_RESOURCES];
 int allocation[NUMBER_OF_CUSTOMERS][NUMBER_OF_RESOURCES];
 /* the remaining need of each customer */
 int need[NUMBER_OF_CUSTOMERS][NUMBER_OF_RESOURCES];
-/* The work work after each successful process*/
-int work[NUMBER_OF_RESOURCES];
 
 int should_run;
 
@@ -44,7 +42,7 @@ thread_params_t* param_ptrs[NUMBER_OF_CUSTOMERS];
 
 pthread_mutex_t mutex;
 
-int safe_sequence_check(int curr_index, int seq[]);
+int safe_sequence_check(int curr_index, int seq[], int work[]);
 /*
 These two functions should return 0 if successful (the request has been
 granted) and –1 if unsuccessful. Multiple threads (customers) will concurrently

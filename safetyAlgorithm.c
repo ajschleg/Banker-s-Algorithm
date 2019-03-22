@@ -2,7 +2,7 @@
 #include "main.h"
 
 // Recursive algorithm to find safe sequence
-int safe_sequence_check(int curr_index, int seq[])
+int safe_sequence_check(int curr_index, int seq[], int work[])
 {
   int swap;
 
@@ -49,7 +49,7 @@ int safe_sequence_check(int curr_index, int seq[])
 		{
 			if (need[p][m] > work[m])
 			{
-        printf("need > work , invalid sequence for index %d as customer %d\n", curr_index, p);
+        printf("need[%d][%d] = %d > work[%d] = %d , invalid sequence for index %d\n", p, m, need[p][m], m, work[m], curr_index);
 				valid = 0;
 				break;
 			}
@@ -71,7 +71,7 @@ int safe_sequence_check(int curr_index, int seq[])
 			}
 
       printf("valid sequence for index %d as customer %d, testing next index...\n", curr_index, p);
-      if (safe_sequence_check(curr_index + 1, &sequence[0]))
+      if (safe_sequence_check(curr_index + 1, sequence, work))
       {
         // could copy valid sequence portion back to pass in array before returning
         // so that caller will know know the final valid sequence
