@@ -21,7 +21,7 @@ int release_resources(int customer_num, int release[])
         allocation[customer_num][i] -= release[i];
 
         /* Add the difference to available */
-        available[i] += difference[i];
+        available[i] += release[i];
     }
     return 1;
 }

@@ -8,103 +8,103 @@
 		<Option virtualFolders="CMake Files\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="/Users/austinschlegel/School/ECE408_OS/Banker-s-Algorithm/cmake-build-debug"/>
+				<Option working_dir="/home/flynn/School/ECE408/Banker-s-Algorithm/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/austinschlegel/School/ECE408_OS/Banker-s-Algorithm/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/austinschlegel/School/ECE408_OS/Banker-s-Algorithm/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/Users/austinschlegel/School/ECE408_OS/Banker-s-Algorithm/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/austinschlegel/School/ECE408_OS/Banker-s-Algorithm/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j12 -f &quot;/home/flynn/School/ECE408/Banker-s-Algorithm/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/flynn/School/ECE408/Banker-s-Algorithm/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/home/flynn/School/ECE408/Banker-s-Algorithm/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/home/flynn/School/ECE408/Banker-s-Algorithm/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
-				<Option working_dir="/Users/austinschlegel/School/ECE408_OS/Banker-s-Algorithm/cmake-build-debug"/>
+				<Option working_dir="/home/flynn/School/ECE408/Banker-s-Algorithm/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/austinschlegel/School/ECE408_OS/Banker-s-Algorithm/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/austinschlegel/School/ECE408_OS/Banker-s-Algorithm/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/Users/austinschlegel/School/ECE408_OS/Banker-s-Algorithm/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/austinschlegel/School/ECE408_OS/Banker-s-Algorithm/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="edit_cache">
-				<Option working_dir="/Users/austinschlegel/School/ECE408_OS/Banker-s-Algorithm/cmake-build-debug"/>
-				<Option type="4"/>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/austinschlegel/School/ECE408_OS/Banker-s-Algorithm/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/austinschlegel/School/ECE408_OS/Banker-s-Algorithm/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/Users/austinschlegel/School/ECE408_OS/Banker-s-Algorithm/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/austinschlegel/School/ECE408_OS/Banker-s-Algorithm/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j12 -f &quot;/home/flynn/School/ECE408/Banker-s-Algorithm/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/flynn/School/ECE408/Banker-s-Algorithm/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/home/flynn/School/ECE408/Banker-s-Algorithm/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/home/flynn/School/ECE408/Banker-s-Algorithm/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="Banker_s_Algorithm">
-				<Option output="/Users/austinschlegel/School/ECE408_OS/Banker-s-Algorithm/cmake-build-debug/Banker_s_Algorithm" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/Users/austinschlegel/School/ECE408_OS/Banker-s-Algorithm/cmake-build-debug"/>
+				<Option output="/home/flynn/School/ECE408/Banker-s-Algorithm/cmake-build-debug/Banker_s_Algorithm" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/flynn/School/ECE408/Banker-s-Algorithm/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/Users/austinschlegel/School/ECE408_OS/Banker-s-Algorithm/."/>
+					<Add directory="/home/flynn/School/ECE408/Banker-s-Algorithm/."/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
 					<Add directory="/usr/local/include"/>
-					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include"/>
-					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
-					<Add directory="/System/Library/Frameworks"/>
-					<Add directory="/Library/Frameworks"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/austinschlegel/School/ECE408_OS/Banker-s-Algorithm/cmake-build-debug/Makefile&quot;  VERBOSE=1 Banker_s_Algorithm"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/austinschlegel/School/ECE408_OS/Banker-s-Algorithm/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/Users/austinschlegel/School/ECE408_OS/Banker-s-Algorithm/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/austinschlegel/School/ECE408_OS/Banker-s-Algorithm/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j12 -f &quot;/home/flynn/School/ECE408/Banker-s-Algorithm/cmake-build-debug/Makefile&quot;  VERBOSE=1 Banker_s_Algorithm"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/flynn/School/ECE408/Banker-s-Algorithm/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/home/flynn/School/ECE408/Banker-s-Algorithm/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/home/flynn/School/ECE408/Banker-s-Algorithm/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="Banker_s_Algorithm/fast">
-				<Option output="/Users/austinschlegel/School/ECE408_OS/Banker-s-Algorithm/cmake-build-debug/Banker_s_Algorithm" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/Users/austinschlegel/School/ECE408_OS/Banker-s-Algorithm/cmake-build-debug"/>
+				<Option output="/home/flynn/School/ECE408/Banker-s-Algorithm/cmake-build-debug/Banker_s_Algorithm" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/flynn/School/ECE408/Banker-s-Algorithm/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/Users/austinschlegel/School/ECE408_OS/Banker-s-Algorithm/."/>
+					<Add directory="/home/flynn/School/ECE408/Banker-s-Algorithm/."/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
 					<Add directory="/usr/local/include"/>
-					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include"/>
-					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
-					<Add directory="/System/Library/Frameworks"/>
-					<Add directory="/Library/Frameworks"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/austinschlegel/School/ECE408_OS/Banker-s-Algorithm/cmake-build-debug/Makefile&quot;  VERBOSE=1 Banker_s_Algorithm/fast"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/austinschlegel/School/ECE408_OS/Banker-s-Algorithm/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/Users/austinschlegel/School/ECE408_OS/Banker-s-Algorithm/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/austinschlegel/School/ECE408_OS/Banker-s-Algorithm/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j12 -f &quot;/home/flynn/School/ECE408/Banker-s-Algorithm/cmake-build-debug/Makefile&quot;  VERBOSE=1 Banker_s_Algorithm/fast"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/flynn/School/ECE408/Banker-s-Algorithm/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/home/flynn/School/ECE408/Banker-s-Algorithm/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/home/flynn/School/ECE408/Banker-s-Algorithm/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/home/flynn/School/ECE408/Banker-s-Algorithm/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/home/flynn/School/ECE408/Banker-s-Algorithm/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/flynn/School/ECE408/Banker-s-Algorithm/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/home/flynn/School/ECE408/Banker-s-Algorithm/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/home/flynn/School/ECE408/Banker-s-Algorithm/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/Users/austinschlegel/School/ECE408_OS/Banker-s-Algorithm/initArrays.c">
+		<Unit filename="/home/flynn/School/ECE408/Banker-s-Algorithm/initArrays.c">
 			<Option target="Banker_s_Algorithm"/>
 		</Unit>
-		<Unit filename="/Users/austinschlegel/School/ECE408_OS/Banker-s-Algorithm/main.c">
+		<Unit filename="/home/flynn/School/ECE408/Banker-s-Algorithm/main.c">
 			<Option target="Banker_s_Algorithm"/>
 		</Unit>
-		<Unit filename="/Users/austinschlegel/School/ECE408_OS/Banker-s-Algorithm/main.h">
+		<Unit filename="/home/flynn/School/ECE408/Banker-s-Algorithm/main.h">
 			<Option target="Banker_s_Algorithm"/>
 		</Unit>
-		<Unit filename="/Users/austinschlegel/School/ECE408_OS/Banker-s-Algorithm/parser.c">
+		<Unit filename="/home/flynn/School/ECE408/Banker-s-Algorithm/parser.c">
 			<Option target="Banker_s_Algorithm"/>
 		</Unit>
-		<Unit filename="/Users/austinschlegel/School/ECE408_OS/Banker-s-Algorithm/printFunctions.c">
+		<Unit filename="/home/flynn/School/ECE408/Banker-s-Algorithm/printFunctions.c">
 			<Option target="Banker_s_Algorithm"/>
 		</Unit>
-		<Unit filename="/Users/austinschlegel/School/ECE408_OS/Banker-s-Algorithm/relResources.c">
+		<Unit filename="/home/flynn/School/ECE408/Banker-s-Algorithm/relResources.c">
 			<Option target="Banker_s_Algorithm"/>
 		</Unit>
-		<Unit filename="/Users/austinschlegel/School/ECE408_OS/Banker-s-Algorithm/reqResources.c">
+		<Unit filename="/home/flynn/School/ECE408/Banker-s-Algorithm/reqResources.c">
 			<Option target="Banker_s_Algorithm"/>
 		</Unit>
-		<Unit filename="/Users/austinschlegel/School/ECE408_OS/Banker-s-Algorithm/threadRunner.c">
+		<Unit filename="/home/flynn/School/ECE408/Banker-s-Algorithm/threadRunner.c">
 			<Option target="Banker_s_Algorithm"/>
 		</Unit>
-		<Unit filename="/Users/austinschlegel/School/ECE408_OS/Banker-s-Algorithm/CMakeLists.txt">
+		<Unit filename="/home/flynn/School/ECE408/Banker-s-Algorithm/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
 	</Project>

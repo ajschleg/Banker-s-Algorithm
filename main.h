@@ -22,6 +22,8 @@ int work[NUMBER_OF_RESOURCES];
 
 int should_run;
 
+
+
 typedef struct {
   int invoked;  // bool to tell if request has been invoked
   int resources[NUMBER_OF_RESOURCES];
@@ -59,6 +61,8 @@ void* thread_runner(void* param);
 void print2dArray(int arr[NUMBER_OF_CUSTOMERS][NUMBER_OF_RESOURCES]);
 void print1dArray(int arr[]);
 void printAll(void);
+
+int finishCheck(int finish[NUMBER_OF_CUSTOMERS], int pInt[NUMBER_OF_RESOURCES]);
 
 void parseInput(char *input);
 

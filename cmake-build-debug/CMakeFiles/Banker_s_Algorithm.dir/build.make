@@ -34,19 +34,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake
+CMAKE_COMMAND = /snap/clion/61/bin/cmake/linux/bin/cmake
 
 # The command to remove a file.
-RM = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E remove -f
+RM = /snap/clion/61/bin/cmake/linux/bin/cmake -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/austinschlegel/School/ECE408_OS/Banker-s-Algorithm
+CMAKE_SOURCE_DIR = /home/flynn/School/ECE408/Banker-s-Algorithm
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/austinschlegel/School/ECE408_OS/Banker-s-Algorithm/cmake-build-debug
+CMAKE_BINARY_DIR = /home/flynn/School/ECE408/Banker-s-Algorithm/cmake-build-debug
 
 # Include any dependencies generated for this target.
 include CMakeFiles/Banker_s_Algorithm.dir/depend.make
@@ -59,94 +59,94 @@ include CMakeFiles/Banker_s_Algorithm.dir/flags.make
 
 CMakeFiles/Banker_s_Algorithm.dir/main.c.o: CMakeFiles/Banker_s_Algorithm.dir/flags.make
 CMakeFiles/Banker_s_Algorithm.dir/main.c.o: ../main.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/austinschlegel/School/ECE408_OS/Banker-s-Algorithm/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/Banker_s_Algorithm.dir/main.c.o"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/Banker_s_Algorithm.dir/main.c.o   -c /Users/austinschlegel/School/ECE408_OS/Banker-s-Algorithm/main.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/flynn/School/ECE408/Banker-s-Algorithm/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/Banker_s_Algorithm.dir/main.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/Banker_s_Algorithm.dir/main.c.o   -c /home/flynn/School/ECE408/Banker-s-Algorithm/main.c
 
 CMakeFiles/Banker_s_Algorithm.dir/main.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/Banker_s_Algorithm.dir/main.c.i"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/austinschlegel/School/ECE408_OS/Banker-s-Algorithm/main.c > CMakeFiles/Banker_s_Algorithm.dir/main.c.i
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/flynn/School/ECE408/Banker-s-Algorithm/main.c > CMakeFiles/Banker_s_Algorithm.dir/main.c.i
 
 CMakeFiles/Banker_s_Algorithm.dir/main.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/Banker_s_Algorithm.dir/main.c.s"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/austinschlegel/School/ECE408_OS/Banker-s-Algorithm/main.c -o CMakeFiles/Banker_s_Algorithm.dir/main.c.s
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/flynn/School/ECE408/Banker-s-Algorithm/main.c -o CMakeFiles/Banker_s_Algorithm.dir/main.c.s
 
 CMakeFiles/Banker_s_Algorithm.dir/relResources.c.o: CMakeFiles/Banker_s_Algorithm.dir/flags.make
 CMakeFiles/Banker_s_Algorithm.dir/relResources.c.o: ../relResources.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/austinschlegel/School/ECE408_OS/Banker-s-Algorithm/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/Banker_s_Algorithm.dir/relResources.c.o"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/Banker_s_Algorithm.dir/relResources.c.o   -c /Users/austinschlegel/School/ECE408_OS/Banker-s-Algorithm/relResources.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/flynn/School/ECE408/Banker-s-Algorithm/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/Banker_s_Algorithm.dir/relResources.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/Banker_s_Algorithm.dir/relResources.c.o   -c /home/flynn/School/ECE408/Banker-s-Algorithm/relResources.c
 
 CMakeFiles/Banker_s_Algorithm.dir/relResources.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/Banker_s_Algorithm.dir/relResources.c.i"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/austinschlegel/School/ECE408_OS/Banker-s-Algorithm/relResources.c > CMakeFiles/Banker_s_Algorithm.dir/relResources.c.i
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/flynn/School/ECE408/Banker-s-Algorithm/relResources.c > CMakeFiles/Banker_s_Algorithm.dir/relResources.c.i
 
 CMakeFiles/Banker_s_Algorithm.dir/relResources.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/Banker_s_Algorithm.dir/relResources.c.s"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/austinschlegel/School/ECE408_OS/Banker-s-Algorithm/relResources.c -o CMakeFiles/Banker_s_Algorithm.dir/relResources.c.s
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/flynn/School/ECE408/Banker-s-Algorithm/relResources.c -o CMakeFiles/Banker_s_Algorithm.dir/relResources.c.s
 
 CMakeFiles/Banker_s_Algorithm.dir/reqResources.c.o: CMakeFiles/Banker_s_Algorithm.dir/flags.make
 CMakeFiles/Banker_s_Algorithm.dir/reqResources.c.o: ../reqResources.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/austinschlegel/School/ECE408_OS/Banker-s-Algorithm/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/Banker_s_Algorithm.dir/reqResources.c.o"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/Banker_s_Algorithm.dir/reqResources.c.o   -c /Users/austinschlegel/School/ECE408_OS/Banker-s-Algorithm/reqResources.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/flynn/School/ECE408/Banker-s-Algorithm/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/Banker_s_Algorithm.dir/reqResources.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/Banker_s_Algorithm.dir/reqResources.c.o   -c /home/flynn/School/ECE408/Banker-s-Algorithm/reqResources.c
 
 CMakeFiles/Banker_s_Algorithm.dir/reqResources.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/Banker_s_Algorithm.dir/reqResources.c.i"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/austinschlegel/School/ECE408_OS/Banker-s-Algorithm/reqResources.c > CMakeFiles/Banker_s_Algorithm.dir/reqResources.c.i
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/flynn/School/ECE408/Banker-s-Algorithm/reqResources.c > CMakeFiles/Banker_s_Algorithm.dir/reqResources.c.i
 
 CMakeFiles/Banker_s_Algorithm.dir/reqResources.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/Banker_s_Algorithm.dir/reqResources.c.s"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/austinschlegel/School/ECE408_OS/Banker-s-Algorithm/reqResources.c -o CMakeFiles/Banker_s_Algorithm.dir/reqResources.c.s
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/flynn/School/ECE408/Banker-s-Algorithm/reqResources.c -o CMakeFiles/Banker_s_Algorithm.dir/reqResources.c.s
 
 CMakeFiles/Banker_s_Algorithm.dir/threadRunner.c.o: CMakeFiles/Banker_s_Algorithm.dir/flags.make
 CMakeFiles/Banker_s_Algorithm.dir/threadRunner.c.o: ../threadRunner.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/austinschlegel/School/ECE408_OS/Banker-s-Algorithm/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/Banker_s_Algorithm.dir/threadRunner.c.o"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/Banker_s_Algorithm.dir/threadRunner.c.o   -c /Users/austinschlegel/School/ECE408_OS/Banker-s-Algorithm/threadRunner.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/flynn/School/ECE408/Banker-s-Algorithm/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/Banker_s_Algorithm.dir/threadRunner.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/Banker_s_Algorithm.dir/threadRunner.c.o   -c /home/flynn/School/ECE408/Banker-s-Algorithm/threadRunner.c
 
 CMakeFiles/Banker_s_Algorithm.dir/threadRunner.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/Banker_s_Algorithm.dir/threadRunner.c.i"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/austinschlegel/School/ECE408_OS/Banker-s-Algorithm/threadRunner.c > CMakeFiles/Banker_s_Algorithm.dir/threadRunner.c.i
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/flynn/School/ECE408/Banker-s-Algorithm/threadRunner.c > CMakeFiles/Banker_s_Algorithm.dir/threadRunner.c.i
 
 CMakeFiles/Banker_s_Algorithm.dir/threadRunner.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/Banker_s_Algorithm.dir/threadRunner.c.s"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/austinschlegel/School/ECE408_OS/Banker-s-Algorithm/threadRunner.c -o CMakeFiles/Banker_s_Algorithm.dir/threadRunner.c.s
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/flynn/School/ECE408/Banker-s-Algorithm/threadRunner.c -o CMakeFiles/Banker_s_Algorithm.dir/threadRunner.c.s
 
 CMakeFiles/Banker_s_Algorithm.dir/printFunctions.c.o: CMakeFiles/Banker_s_Algorithm.dir/flags.make
 CMakeFiles/Banker_s_Algorithm.dir/printFunctions.c.o: ../printFunctions.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/austinschlegel/School/ECE408_OS/Banker-s-Algorithm/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/Banker_s_Algorithm.dir/printFunctions.c.o"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/Banker_s_Algorithm.dir/printFunctions.c.o   -c /Users/austinschlegel/School/ECE408_OS/Banker-s-Algorithm/printFunctions.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/flynn/School/ECE408/Banker-s-Algorithm/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/Banker_s_Algorithm.dir/printFunctions.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/Banker_s_Algorithm.dir/printFunctions.c.o   -c /home/flynn/School/ECE408/Banker-s-Algorithm/printFunctions.c
 
 CMakeFiles/Banker_s_Algorithm.dir/printFunctions.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/Banker_s_Algorithm.dir/printFunctions.c.i"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/austinschlegel/School/ECE408_OS/Banker-s-Algorithm/printFunctions.c > CMakeFiles/Banker_s_Algorithm.dir/printFunctions.c.i
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/flynn/School/ECE408/Banker-s-Algorithm/printFunctions.c > CMakeFiles/Banker_s_Algorithm.dir/printFunctions.c.i
 
 CMakeFiles/Banker_s_Algorithm.dir/printFunctions.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/Banker_s_Algorithm.dir/printFunctions.c.s"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/austinschlegel/School/ECE408_OS/Banker-s-Algorithm/printFunctions.c -o CMakeFiles/Banker_s_Algorithm.dir/printFunctions.c.s
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/flynn/School/ECE408/Banker-s-Algorithm/printFunctions.c -o CMakeFiles/Banker_s_Algorithm.dir/printFunctions.c.s
 
 CMakeFiles/Banker_s_Algorithm.dir/initArrays.c.o: CMakeFiles/Banker_s_Algorithm.dir/flags.make
 CMakeFiles/Banker_s_Algorithm.dir/initArrays.c.o: ../initArrays.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/austinschlegel/School/ECE408_OS/Banker-s-Algorithm/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object CMakeFiles/Banker_s_Algorithm.dir/initArrays.c.o"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/Banker_s_Algorithm.dir/initArrays.c.o   -c /Users/austinschlegel/School/ECE408_OS/Banker-s-Algorithm/initArrays.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/flynn/School/ECE408/Banker-s-Algorithm/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object CMakeFiles/Banker_s_Algorithm.dir/initArrays.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/Banker_s_Algorithm.dir/initArrays.c.o   -c /home/flynn/School/ECE408/Banker-s-Algorithm/initArrays.c
 
 CMakeFiles/Banker_s_Algorithm.dir/initArrays.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/Banker_s_Algorithm.dir/initArrays.c.i"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/austinschlegel/School/ECE408_OS/Banker-s-Algorithm/initArrays.c > CMakeFiles/Banker_s_Algorithm.dir/initArrays.c.i
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/flynn/School/ECE408/Banker-s-Algorithm/initArrays.c > CMakeFiles/Banker_s_Algorithm.dir/initArrays.c.i
 
 CMakeFiles/Banker_s_Algorithm.dir/initArrays.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/Banker_s_Algorithm.dir/initArrays.c.s"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/austinschlegel/School/ECE408_OS/Banker-s-Algorithm/initArrays.c -o CMakeFiles/Banker_s_Algorithm.dir/initArrays.c.s
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/flynn/School/ECE408/Banker-s-Algorithm/initArrays.c -o CMakeFiles/Banker_s_Algorithm.dir/initArrays.c.s
 
 CMakeFiles/Banker_s_Algorithm.dir/parser.c.o: CMakeFiles/Banker_s_Algorithm.dir/flags.make
 CMakeFiles/Banker_s_Algorithm.dir/parser.c.o: ../parser.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/austinschlegel/School/ECE408_OS/Banker-s-Algorithm/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building C object CMakeFiles/Banker_s_Algorithm.dir/parser.c.o"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/Banker_s_Algorithm.dir/parser.c.o   -c /Users/austinschlegel/School/ECE408_OS/Banker-s-Algorithm/parser.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/flynn/School/ECE408/Banker-s-Algorithm/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building C object CMakeFiles/Banker_s_Algorithm.dir/parser.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/Banker_s_Algorithm.dir/parser.c.o   -c /home/flynn/School/ECE408/Banker-s-Algorithm/parser.c
 
 CMakeFiles/Banker_s_Algorithm.dir/parser.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/Banker_s_Algorithm.dir/parser.c.i"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/austinschlegel/School/ECE408_OS/Banker-s-Algorithm/parser.c > CMakeFiles/Banker_s_Algorithm.dir/parser.c.i
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/flynn/School/ECE408/Banker-s-Algorithm/parser.c > CMakeFiles/Banker_s_Algorithm.dir/parser.c.i
 
 CMakeFiles/Banker_s_Algorithm.dir/parser.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/Banker_s_Algorithm.dir/parser.c.s"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/austinschlegel/School/ECE408_OS/Banker-s-Algorithm/parser.c -o CMakeFiles/Banker_s_Algorithm.dir/parser.c.s
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/flynn/School/ECE408/Banker-s-Algorithm/parser.c -o CMakeFiles/Banker_s_Algorithm.dir/parser.c.s
 
 # Object files for target Banker_s_Algorithm
 Banker_s_Algorithm_OBJECTS = \
@@ -170,7 +170,7 @@ Banker_s_Algorithm: CMakeFiles/Banker_s_Algorithm.dir/initArrays.c.o
 Banker_s_Algorithm: CMakeFiles/Banker_s_Algorithm.dir/parser.c.o
 Banker_s_Algorithm: CMakeFiles/Banker_s_Algorithm.dir/build.make
 Banker_s_Algorithm: CMakeFiles/Banker_s_Algorithm.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/austinschlegel/School/ECE408_OS/Banker-s-Algorithm/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking C executable Banker_s_Algorithm"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/flynn/School/ECE408/Banker-s-Algorithm/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking C executable Banker_s_Algorithm"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Banker_s_Algorithm.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -183,6 +183,6 @@ CMakeFiles/Banker_s_Algorithm.dir/clean:
 .PHONY : CMakeFiles/Banker_s_Algorithm.dir/clean
 
 CMakeFiles/Banker_s_Algorithm.dir/depend:
-	cd /Users/austinschlegel/School/ECE408_OS/Banker-s-Algorithm/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/austinschlegel/School/ECE408_OS/Banker-s-Algorithm /Users/austinschlegel/School/ECE408_OS/Banker-s-Algorithm /Users/austinschlegel/School/ECE408_OS/Banker-s-Algorithm/cmake-build-debug /Users/austinschlegel/School/ECE408_OS/Banker-s-Algorithm/cmake-build-debug /Users/austinschlegel/School/ECE408_OS/Banker-s-Algorithm/cmake-build-debug/CMakeFiles/Banker_s_Algorithm.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/flynn/School/ECE408/Banker-s-Algorithm/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/flynn/School/ECE408/Banker-s-Algorithm /home/flynn/School/ECE408/Banker-s-Algorithm /home/flynn/School/ECE408/Banker-s-Algorithm/cmake-build-debug /home/flynn/School/ECE408/Banker-s-Algorithm/cmake-build-debug /home/flynn/School/ECE408/Banker-s-Algorithm/cmake-build-debug/CMakeFiles/Banker_s_Algorithm.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/Banker_s_Algorithm.dir/depend
 

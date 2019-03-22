@@ -11,7 +11,7 @@ void* thread_runner(void* param)
     /*Use temp to access and change thread status*/
     thread_params_t* params = (thread_params_t *)param;
 
-    printf("Thread ID: %d\n", params->customer_num);
+    //printf("Thread ID: %d\n", params->customer_num);
 
     // while(!exit)
     while(should_run)

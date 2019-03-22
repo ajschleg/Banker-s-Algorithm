@@ -70,10 +70,9 @@ int request_resources(int customer_num, int request[])
 	 * For m resources and n customers,
 	 * Let Work be length m and Finish be length n
 	 */
-	
-	int work[NUMBER_OF_RESOURCES];
-	int finish[NUMBER_OF_CUSTOMERS];
 
+    int finish[NUMBER_OF_CUSTOMERS];
+    int work[NUMBER_OF_RESOURCES];
 	/* I. Init Work = Available 
 	 * 		Init Finish = 'false' for all customers
 	 */
@@ -93,38 +92,21 @@ int request_resources(int customer_num, int request[])
 	 * 		If found, go to step III
 	 * 		If no such i exists, go to step IV
 	 */
-	int unsafe = 0;
+    for (int j = 0; j < NUMBER_OF_CUSTOMERS; ++j) {
+        for (int i = 0; i < NUMBER_OF_CUSTOMERS; ++i) {
+            printf("%d ", finish[i]);
+            printf("\n");
+        }
+        if(finishCheck(finish, work))
+        {
+            continue;
+        }
+        else
+        {
+            break;
+        }
+    }
 
-	for (int i = 0; i < NUMBER_OF_CUSTOMERS; ++i)
-	{
-		if (!finish[i])
-		{
-			// check that need is <= to work for all resources
-			for (int j = 0; j < NUMBER_OF_RESOURCES; ++j)
-			{
-				if (need[i][j] > work[j])
-				{
-					unsafe = 1;	// should loop back and recheck?
-					break;
-				}
-			}
-			// if so, place in safe sequence
-			if (!unsafe)
-			{
-				for (int j = 0; j < NUMBER_OF_RESOURCES; ++j)
-				{
-					work[j] += allocation[i][j];
-				}
-				//printf("setting finish[%d] = 1\n", i);
-				finish[i] = 1;
-			}
-			else
-			{
-				// Do something else? or just leave finish = 0 ?
-				// Should loop over customers again?
-			}
-		}
-	}
 
 	/* IV. If Finish[i] == 'true' for all i,
 	 *
@@ -167,4 +149,57 @@ int request_resources(int customer_num, int request[])
 	printf("Customer # %d - Request granted.\n", customer_num);
 	printAll();
 	return 0;
+}
+
+int finishCheck(int finish[NUMBER_OF_CUSTOMERS], int work[NUMBER_OF_RESOURCES])
+{
+
+    int unsafe = 0;
+    int zero_count = 0;
+
+    printf("TEST\n");
+
+    for (int i = 0; i < NUMBER_OF_CUSTOMERS; ++i)
+    {
+        if (!finish[i])
+        {
+            // check that need is > to work for all resources
+            for (int j = 0; j < NUMBER_OF_RESOURCES; ++j)
+            {
+                printf("checking if %d > %d\n", need[i][j], work[j]);
+                if (need[i][j] > work[j])
+                {
+                    unsafe = 1;	// should loop back and recheck?
+                    break;
+                }
+            }
+            // if so, place in safe sequence
+            if (!unsafe)    
+            {
+                for (int j = 0; j < NUMBER_OF_RESOURCES; ++j)
+                {
+                    work[j] += allocation[i][j];
+                }
+                printf("setting finish[%d] = 1\n", i);
+                finish[i] = 1;
+            }
+            else
+            {
+                // Do something else? or just leave finish = 0 ?
+                // Should loop over customers again?
+                // LOOP AGAIN
+                zero_count++;
+            }
+        }
+    }
+
+    if(zero_count > 0)
+    {
+        return 1;
+    }
+    else
+    {
+        return 0;
+    }
+
 }
