@@ -66,10 +66,11 @@ int request_resources(int customer_num, int request[])
 	 */
 	
 	int work[NUMBER_OF_RESOURCES];
-	int finish[NUMBER_OF_CUSTOMERS];
+	int sequence[NUMBER_OF_CUSTOMERS];
 
 	/* I. Init Work = Available 
-	 * 		Init Finish = 'false' for all customers
+	 * 		
+	 *  Using sequence array, init to customer numbers in order
 	 */
 	for (int i = 0; i < NUMBER_OF_RESOURCES; ++i)
 	{
@@ -77,86 +78,34 @@ int request_resources(int customer_num, int request[])
 	}
 	for (int i = 0; i < NUMBER_OF_CUSTOMERS; ++i)
 	{
-		finish[i] = 0;
+		sequence[i] = i;
 	}
 
-	/* II. Find an index i such that both
-	 * 			a.) Finish[i] == false
-	 * 			b.) Need[sub i] <= Work
-	 * 
-	 * 		If found, go to step III
-	 * 		If no such i exists, go to step IV
-	 */
-	int unsafe = 0;
-
-	for (int i = 0; i < NUMBER_OF_CUSTOMERS; ++i)
+	// starting at first element of sequence array, use as customer index
+	for (int i = 0, j; i < NUMBER_OF_CUSTOMERS; ++i)
 	{
-		if (!finish[i])
-		{
-			// check that need is <= to work for all resources
-			for (int j = 0; j < NUMBER_OF_RESOURCES; ++j)
-			{
-				if (need[i][j] > work[j])
-				{
-					unsafe = 1;	// should loop back and recheck?
-					break;
-				}
-			}
-			// if so, place in safe sequence
-			if (!unsafe)
-			{
-				for (int j = 0; j < NUMBER_OF_RESOURCES; ++j)
-				{
-					work[j] += allocation[i][j];
-				}
-				printf("setting finish[%d] = 1\n", i);
-				finish[i] = 1;
-			}
-			else
-			{
-				// Do something else? or just leave finish = 0 ?
-				// Should loop over customers again?
-			}
+		j = sequence[i];
 
 
-		}
 	}
 
-	/* IV. If Finish[i] == 'true' for all i,
-	 *
-	 *			Then the system is in safe state.
-	 * 
-	 */
 
-	// Confirm that all finish[i] are true before leaving allocation
-	for (int i = 0; i < NUMBER_OF_CUSTOMERS; ++i)
-	{
-		if (!finish[i])
-		{
-			// System will not be safe, reset state
-			// Available = Available + Request
-			for (int i = 0; i < NUMBER_OF_RESOURCES; ++i)
-			{
-				available[i] += request[i];
-			}
+	
 
-			// Allocation = Allocation - Request
-			for (int i = 0; i < NUMBER_OF_RESOURCES; ++i)
-			{
-				allocation[customer_num][i] -= request[i];
-			}
 
-			// Need = Need + Request
-			for (int i = 0; i < NUMBER_OF_RESOURCES; ++i)
-			{
-				need[customer_num][i] += request[i];
-			}
+
+
+
+
+
+
+
+
 
 			// Request not granted, return denied
 			printf("Request Denied: System would be left in unsafe state\n");
 			return -1;
-		}
-	}
+	
 
 	// If made it here, resources were allocated
 	// Request granted, return success
