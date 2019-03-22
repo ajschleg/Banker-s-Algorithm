@@ -13,7 +13,7 @@ int release_resources(int customer_num, int release[])
         /* Check if able to release those resources*/
         if(difference[i] < 0)
         {
-            printf("Not able to release\n");
+            printf("Not able to release resources\n");
             return -1;
         }
 
@@ -21,6 +21,7 @@ int release_resources(int customer_num, int release[])
         allocation[customer_num][i] -= release[i];
 
         /* Add the difference to available */
-
+        available[i] += difference[i];
     }
+    return 1;
 }

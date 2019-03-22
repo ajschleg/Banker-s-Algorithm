@@ -65,6 +65,11 @@ int main(int argc, char *argv[])
 		{
 			should_run = 0;
 		}
+		if(!strcmp(input, "show\n"))
+        {
+		    /*print all arrays*/
+		    printAll();
+        }
 
 		parseInput(input);
 	}

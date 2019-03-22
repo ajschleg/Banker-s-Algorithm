@@ -5,7 +5,13 @@
 int request_resources(int customer_num, int request[])
 {
 
-	printf("Customer # %d - Issuing request...\n", customer_num);
+	printf("Customer # %d - Issuing request for [", customer_num);
+    for (int k = 0; k < NUMBER_OF_RESOURCES; ++k)
+    {
+        printf("%d ", param_ptrs[customer_num]->request.resources[k]);
+    }
+    printf("]\n");
+
 
 	/* Step 1: Check if request is within need */
 	for (int i = 0; i < NUMBER_OF_RESOURCES; ++i)
@@ -109,7 +115,7 @@ int request_resources(int customer_num, int request[])
 				{
 					work[j] += allocation[i][j];
 				}
-				printf("setting finish[%d] = 1\n", i);
+				//printf("setting finish[%d] = 1\n", i);
 				finish[i] = 1;
 			}
 			else
@@ -117,8 +123,6 @@ int request_resources(int customer_num, int request[])
 				// Do something else? or just leave finish = 0 ?
 				// Should loop over customers again?
 			}
-
-
 		}
 	}
 
@@ -161,5 +165,6 @@ int request_resources(int customer_num, int request[])
 	// If made it here, resources were allocated
 	// Request granted, return success
 	printf("Customer # %d - Request granted.\n", customer_num);
+	printAll();
 	return 0;
 }

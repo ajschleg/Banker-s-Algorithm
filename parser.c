@@ -60,7 +60,7 @@ void parseInput(char *input)
         else
         {
             int req_num = atoi(token);
-            printf("Token: %s atoi: %d\n", token, req_num);
+            //printf("Token: %s atoi: %d\n", token, req_num);
 
             if(!strcmp(token, "rq"))
             {
