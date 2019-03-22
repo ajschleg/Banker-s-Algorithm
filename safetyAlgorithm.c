@@ -28,6 +28,7 @@ int safe_sequence_check(int curr_index, int seq[])
 
 		valid = 1;
 		p = sequence[0];
+    printf("Testing sequence index %d as customer %d\n", curr_index, p);
 
 		for (int m = 0; m < NUMBER_OF_RESOURCES; ++m)
 		{
@@ -41,6 +42,12 @@ int safe_sequence_check(int curr_index, int seq[])
 		// if need <= work for all resources for this customer in this sequence
 		if (valid)
 		{
+      // if this is the last element of the sequence, just return valid
+      if (arr_size == 1)
+      {
+        return 1;
+      }
+
 			for (int m = 0; m < NUMBER_OF_RESOURCES; ++m)
 			{
 				work[m] += allocation[p][m];
