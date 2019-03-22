@@ -95,11 +95,11 @@ int request_resources(int customer_num, int request[])
 
 
 
-			// Request not granted, return denied
-			printf("Request Denied: System would be left in unsafe state\n");
-			return -1;
+	// Request not granted, return denied
+	printf("Request Denied: System would be left in unsafe state\n");
+	return -1;
 
-			// undo allocation here?
+	// undo allocation here?
 	
 
 	// If made it here, resources were allocated
