@@ -8,5 +8,6 @@ include_directories(.)
 add_executable(Banker_s_Algorithm
         main.c
         main.h
+        safetyAlgorithm.c
         relResources.c
         reqResources.c threadRunner.c printFunctions.c initArrays.c parser.c)

@@ -81,22 +81,15 @@ int request_resources(int customer_num, int request[])
 		sequence[i] = i;
 	}
 
-	// starting at first element of sequence array, use as customer index
-	for (int i = 0, j; i < NUMBER_OF_CUSTOMERS; ++i)
-	{
-		j = sequence[i];
-
-
-	}
-
-
 	
+	if (safe_sequence_check(0, sequence));
+	{
+		// There is a safe sequence, grant the request
+		printf("Safe sequence found\n");
 
 
-
-
-
-
+		return 0;
+	}
 
 
 
@@ -105,6 +98,8 @@ int request_resources(int customer_num, int request[])
 			// Request not granted, return denied
 			printf("Request Denied: System would be left in unsafe state\n");
 			return -1;
+
+			// undo allocation here?
 	
 
 	// If made it here, resources were allocated

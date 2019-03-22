@@ -38,10 +38,6 @@ void print1dArray(int arr[])
 
 void printAll()
 {
-    printf("Available\n");
-    print1dArray(available);
-    printf("\n");
-
     printf("Maximum\n");
     print2dArray(maximum);
     printf("\n");
@@ -52,6 +48,10 @@ void printAll()
 
     printf("Need\n");
     print2dArray(need);
+    printf("\n");
+
+    printf("Available\n");
+    print1dArray(available);
     printf("\n");
 }
 

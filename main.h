@@ -44,6 +44,7 @@ thread_params_t* param_ptrs[NUMBER_OF_CUSTOMERS];
 
 pthread_mutex_t mutex;
 
+int safe_sequence_check(int curr_index, int seq[]);
 /*
 These two functions should return 0 if successful (the request has been
 granted) and –1 if unsuccessful. Multiple threads (customers) will concurrently
